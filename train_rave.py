@@ -13,10 +13,13 @@ import os
 import numpy as np
 
 import GPUtil as gpu
+import wandb
 
 from udls.transforms import Compose, RandomApply, Dequantize, RandomCrop
 
 if __name__ == "__main__":
+
+    wandb.init(project="rave", sync_tensorboard=True)
 
     class args(Config):
         groups = ["small", "large"]
