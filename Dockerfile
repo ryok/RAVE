@@ -11,6 +11,6 @@ RUN pip install -r /tmp/requirements.txt
 RUN pip install torch==1.11.0 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
 RUN pip install --ignore-installed --upgrade --no-cache-dir tensorflow
 RUN pip install audiomentations pydub 
-#RUN pip install neutone_sdk
+RUN pip install --ignore-installed neutone_sdk
 
 WORKDIR /workspace
